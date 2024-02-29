@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 interface SVGButtonProps {
     href: string,
     src: string,
@@ -11,7 +13,7 @@ export function SVGButton({href, src, alt}:SVGButtonProps) {
       href={href}
       className="rounded-full transition-colors-transform duration-200 hover:scale-110"
     >
-      <img
+      <Image
         src={src}
         alt={alt}
         className="rounded-full shadow-xl"
