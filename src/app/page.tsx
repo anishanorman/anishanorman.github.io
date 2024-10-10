@@ -1,3 +1,11 @@
+import { HeroSection } from "@/components/HeroSection/HeroSection"
+import { SkillSection } from "@/components/SkillSection/SkillSection"
+
 export default function Page() {
-  return <h1>Home</h1>
+  return (
+    <>
+      <HeroSection />
+      <SkillSection />
+    </>
+  )
 }
