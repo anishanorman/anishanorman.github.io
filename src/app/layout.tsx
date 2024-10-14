@@ -19,11 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.className}`}>
-      <body className="w-full flex overflow-hidden">
+      <body className="w-full flex flex-col">
+        <Bubbles />
         <Navbar />
-        <main className="flex flex-col size-full justify-between overflow-x-hidden">
-          {children}
-        </main>
+        <main className="size-full overflow-x-hidden">{children}</main>
       </body>
     </html>
   )

@@ -53,14 +53,14 @@ export const InfiniteCarousel = ({ children }: CarouselProps) => {
 
   return (
     <div
-      className={`flex justify-center grow`}
+      className={`flex justify-center items-center grow`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {carouselItems.map((item, index) => (
         <div
           key={index}
-          className={`p-8 basis-full ${movingClass} w-32 h-32`}
+          className={`p-6 mx-3 px-4 basis-full w-16 ${movingClass}`}
           style={{ minWidth: `${minItemWidth}%` }}
         >
           {item}
