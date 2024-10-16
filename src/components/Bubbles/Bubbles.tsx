@@ -6,7 +6,7 @@ const Bubbles = () => {
   const numBubbles = 50
 
   return (
-    <div className="fixed inset-0 z-[-999] overflow-hidden">
+    <div className="fixed inset-0 z-[-1] overflow-hidden">
       {Array.from({ length: numBubbles }, (_, index) => (
         <div
           key={`bubble-${index}`}

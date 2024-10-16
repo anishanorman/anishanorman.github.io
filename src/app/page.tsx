@@ -1,11 +1,13 @@
+"use client"
+
 import { HeroSection } from "@/components/HeroSection/HeroSection"
-import { Footer } from "@/components/Footer/Footer"
+import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 export default function Page() {
   return (
-    <div className="flex flex-col h-full justify-between items-center">
+    <>
       <HeroSection />
-      <Footer />
-    </div>
+    </>
   )
 }

@@ -1,30 +1,29 @@
-'use client'
+"use client"
 
-import { NavButton } from "./NavButton";
-import { Footer } from "./Footer/Footer";
-import { useState } from "react";
-import Link from "next/link";
-import { SVGButton } from "./Footer/SVGButton";
-import { RoundDivider } from "./Footer/RoundDivider";
+import { NavButton } from "./NavButton"
+import { useState } from "react"
+import Link from "next/link"
+import { SVGButton } from "./SVGButton"
+import { RoundDivider } from "./RoundDivider"
 
 export function Navbar() {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   const handleBurgerClick = () => {
-    setMobileNavOpen(!mobileNavOpen);
-  };
+    setMobileNavOpen(!mobileNavOpen)
+  }
 
   const handleLinkClick = () => {
-    setMobileNavOpen(false);
-  };
+    setMobileNavOpen(false)
+  }
 
   return (
     <nav>
       {/* Mobile Navbar */}
-      <div className="z-50 flex sm:hidden justify-between bg-container/95 p-3 text-white/80 overflow-hidden">
+      <div className="flex sm:hidden bg-container/95 p-3 text-white/80 overflow-hidden">
         <button
           onClick={handleBurgerClick}
-          className="flex flex-col gap-1 justify-center items-center p-3"
+          className="flex flex-col gap-1 justify-center p-3"
         >
           <div className="h-1 w-6 bg-white/90 rounded"></div>
           <div className="h-1 w-6 bg-white/90 rounded"></div>
@@ -44,16 +43,34 @@ export function Navbar() {
       </div>
 
       <div
-        className={`sm:hidden flex flex-col bg-container/95 p-3 justify-between transform transition-transform duration-500 ease-in-out ${
+        className={`sm:hidden flex flex-col bg-container/95 p-3 ${
           mobileNavOpen ? "" : "hidden"
         }`}
       >
-        <ul className="flex flex-col overflow-hidden items-center justify-between px-12 py-3 gap-4">
+        <ul className="flex flex-col overflow-hidden items-center py-3 gap-4">
           <NavButton onClick={handleLinkClick} href="/" label="Home" />
           <NavButton onClick={handleLinkClick} href="/about" label="About" />
-          <NavButton onClick={handleLinkClick} href="/projects" label="Projects" />
+          <NavButton
+            onClick={handleLinkClick}
+            href="/projects"
+            label="Projects"
+          />
         </ul>
-        <Footer />
+        <div className="flex items-center justify-center gap-4 m-4">
+          <SVGButton
+            href="https://github.com/anishanorman"
+            src="../assets/github.svg"
+            alt="Github logo"
+            className="h-10"
+          />
+          <RoundDivider />
+          <SVGButton
+            href="https://www.linkedin.com/in/anisha-norman"
+            src="../assets/linkedIn.svg"
+            alt="LinkedIn logo"
+            className="h-10"
+          />
+        </div>
       </div>
 
       {/* Desktop Navbar */}
@@ -73,21 +90,21 @@ export function Navbar() {
         <div className="flex justify-around items-center w-1/3 grow px-[2vw] lg:px=[4vw] xl:px-[8vw]">
           <Link
             href="/"
-            className="hover:scale-110 transition-transform duration-300"
+            className="hover:scale-110 duration-300"
           >
             Home
           </Link>
           <RoundDivider />
           <Link
             href="/about"
-            className="hover:scale-110 transition-transform duration-300"
+            className="hover:scale-110 duration-300"
           >
             About
           </Link>
           <RoundDivider />
           <Link
             href="/projects"
-            className="hover:scale-110 transition-transform duration-300"
+            className="hover:scale-110 duration-300"
           >
             Projects
           </Link>
