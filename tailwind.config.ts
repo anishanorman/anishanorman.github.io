@@ -11,9 +11,9 @@ const config: Config = {
       colors: {
         "bg": "#211b39",
         "container": "#1D1734",
-        "container-primary": "#251F3E",
-        "container-secondary": "#393254",
-        "container-tertiary": "#4B4463",
+        "container-1": "#251F3E",
+        "container-2": "#393254",
+        "container-3": "#4B4463",
         accent: "#00C6AE",
       },
       keyframes: {

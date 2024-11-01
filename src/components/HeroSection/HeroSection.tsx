@@ -1,10 +1,11 @@
 "use client"
 
 import Link from "next/link"
+import { RevealOnScroll } from "../RevealOnScroll"
 
 export const HeroSection = () => {
   return (
-    <div className="text-white/80 flex bg-container/95 p-3 md:p-6 lg:p-8 rounded-lg shadow-2xl m-5 my-auto w-fit">
+    <RevealOnScroll className="text-white/80 flex bg-container/95 p-3 md:p-6 lg:p-8 rounded-lg shadow-2xl m-5 my-auto w-fit">
       <div className="flex flex-col p-6">
         <p className="font-bold text-7xl">Hi!</p>
         <p className="text-2xl mt-2">
@@ -24,7 +25,7 @@ export const HeroSection = () => {
           </a>
           <Link
             href=""
-            className="grow bg-container-secondary text-white/60 rounded-full text-lg text-center shadow-xl p-2 duration-200 hover:scale-105"
+            className="grow bg-container-2 text-white/60 rounded-full text-lg text-center shadow-xl p-2 duration-200 hover:scale-105"
           >
             Contact
           </Link>
@@ -35,6 +36,6 @@ export const HeroSection = () => {
         alt="Picture of Anisha with a black and white dress on, holding a cocktail and golf club"
         className="m-auto hidden sm:block rounded shadow-xl w-1/2 object-top object-cover h-72 aspect-auto"
       />
-    </div>
+    </RevealOnScroll>
   )
 }

@@ -2,7 +2,7 @@
 
 export const Footer = () => {
   return (
-    <div className="flex p-4 gap-8 justify-center items-center bg-container/90 overflow-x-auto w-full">
+    <div className="flex p-4 gap-8 justify-center items-center bg-container/90 overflow-x-auto w-full overflow-y-hidden">
       {skills.map((skill, index) => {
         return (
           <img

@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Navbar } from "../components/navbar/Navbar"
-import Bubbles from "@/components/Bubbles/Bubbles"
-import { Footer } from "@/components/Footer/Footer"
+import Bubbles from "../components/Bubbles/Bubbles"
+import { Footer } from "../components/Footer/Footer"
+import { Navbar } from "../components/Navbar/Navbar"
 
 export const metadata: Metadata = {
   title: "Anisha Norman",
@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className="flex flex-col">
         <Bubbles />
         <Navbar />
-        <main className="size-full overflow-x-hidden flex flex-col justify-center items-center">
+        <main className="text-white/90 size-full overflow-x-hidden flex flex-col items-center">
           {children}
         </main>
         <Footer />
